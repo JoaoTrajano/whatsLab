@@ -1,11 +1,16 @@
+import './App.css' 
+
+/* imports dos componentes*/
+import { TelaDeMensagem } from "./components/TelaDeMensagem";
+import { Form } from "./components/Form";
 
 function App() {
+
   return (
-    <div>
-      <h1>
-        teste
-      </h1>
-    </div>
+    <main className="main">
+      <TelaDeMensagem class="main-tela"/>
+      <Form />
+    </main>
   );
 }
 
