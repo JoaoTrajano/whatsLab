@@ -4,12 +4,16 @@ import './App.css'
 import { TelaDeMensagem } from "./components/TelaDeMensagem";
 import { Form } from "./components/Form";
 
+function enviarMensagem () {
+
+}
+
 function App() {
 
   return (
     <main className="main">
       <TelaDeMensagem class="main-tela"/>
-      <Form />
+      <Form onClickFunction={enviarMensagem} />
     </main>
   );
 }

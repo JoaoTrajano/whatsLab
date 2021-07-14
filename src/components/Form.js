@@ -1,13 +1,13 @@
 import React from 'react'
 
-export const Form = () => {
-
+export const Form = (props) => {
+    
     return (
-        <form className="container-form">
-            <input type="text" placeholder="Usuário" />
-            <input type="text" placeholder="Mensagem"/>
-            <button>Enviar</button>
-        </form>
+        <div className="container-form">
+            <input type="text" placeholder="Usuário" name="usuario" />
+            <input type="text" placeholder="Mensagem" name="mensagem"/>
+            <button onClick={props.enviarMensagem}>Enviar</button>
+        </div>
     )
 
 }
