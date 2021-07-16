@@ -37,15 +37,14 @@ export class ContainerForm extends React.Component {
         currentArrayMensage.push(mensage);
         this.setState({ arrayMensages: currentArrayMensage })
     }
-    
+
     render() {
 
-        const msg = this.state.arrayMensages.map((idObject) => {
-            return <Mensage user={idObject.nameUsuario} mensage={idObject.mensage} />
-        })
         return <div className="container-form">
             <div className="container-mensage">
-                {msg}
+                {this.state.arrayMensages.map((idObject) => {
+                    return <Mensage user={idObject.nameUsuario} mensage={idObject.mensage} />
+                })}
             </div>
 
             <form onSubmit={this.handleSubmit}>
