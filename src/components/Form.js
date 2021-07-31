@@ -32,10 +32,7 @@ export class ContainerForm extends React.Component {
             mensage: this.state.mensage
         }
 
-        let currentArrayMensage = this.state.arrayMensages;
-
-        currentArrayMensage.push(mensage);
-        this.setState({ arrayMensages: currentArrayMensage })
+        this.setState({ arrayMensages: [...this.state.arrayMensages, mensage] })
     }
 
     render() {
@@ -48,11 +45,9 @@ export class ContainerForm extends React.Component {
             </div>
 
             <form onSubmit={this.handleSubmit}>
-                {/* <div className="form"> */}
                 <input onChange={this.onChangeNameUser} value={this.state.nameUsuario} type="text" placeholder="Usuário" name="usuario" />
                 <input onChange={this.onChangeMensage} type="text" placeholder="Mensagem" name="mensagem" />
                 <button>Enviar</button>
-                {/* </div> */}
             </form>
         </div >
     }
